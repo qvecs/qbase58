@@ -24,12 +24,15 @@ jobs:
           python -m pip install --upgrade pip
           pip install cibuildwheel
 
-      - name: Build wheels
+      - name: Build Wheels
         env:
           CIBW_SKIP: "cp3*-win* *-i686 cp36-* cp37-* pp36-* pp37-*"
           CIBW_ARCHS_LINUX: x86_64
           CIBW_ARCHS_MACOS: universal2
         run: cibuildwheel --output-dir dist
+
+      - name: Build Source Distribution
+        run: python setup.py sdist --dist-dir dist
 
       - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
