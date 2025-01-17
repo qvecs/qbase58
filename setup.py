@@ -5,7 +5,7 @@ with open("README.md", encoding="utf-8") as f:
 
 setup(
     name="qbase58",
-    version="1.0.1",
+    version="1.0.2",
     author="Quick Vectors",
     author_email="felipe@qvecs.com",
     description="Quick Base58 encoding/decoding.",
