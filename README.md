@@ -1,4 +1,4 @@
-# Quick Base58 _(qbase58)_
+# 🔩 Quick Base58 _(qbase58)_
 
 <p align="center">
 
